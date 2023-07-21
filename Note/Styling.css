@@ -1,0 +1,193 @@
+.card {
+	font-family: "Yu Mincho";
+	font-size: 45px;
+	text-align: center;
+	color: black;
+	background-color:#EFEFEF;
+	margin: auto;
+	max-width: 80%;
+	overflow-y: scroll;
+}
+
+.card.nightMode {
+	color: white;
+}
+
+/*Bold colors*/
+b {
+	color: #4660f1;
+}
+
+.nightMode b {
+	color: #fffd9e;
+}
+
+/*Wider window for portrait*/
+@media screen and (orientation: portrait) {
+    .card {
+        max-width: 100%;
+				 font-size: calc(1em + 1.5vmax);
+    }
+}
+
+/*Spacing and font size options*/
+#word-field {
+    font-size: 100%;
+}
+
+#sentence-field {
+		font-size: 80%;
+}
+
+#reading-field {
+    font-size: 100%;
+}
+
+#accent-graph {
+		font-size: 70%;
+		margin-top: -5px;
+		margin-bottom: 5px;
+}
+
+#audio-field {
+		//margin-top: -3%;
+}
+
+/*Definition options*/
+#primary-definition-field ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+}
+
+#primary-definition-field {
+		font-size: 50%;
+}
+
+#primary-definition-field li {
+		text-align: center;
+}
+
+#secondary-definition-field ol,
+#extra-definitions-field ol,
+#extra-info-field {
+		font-size: 40%;
+		background-color: #E3E3E3;
+		border: 1px solid black;
+		border-radius: 10px;
+}
+
+#extra-info-field {
+		margin: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: fit-content;
+}
+
+.card.nightMode #secondary-definition-field ol,
+.card.nightMode #extra-definitions-field ol,
+.card.nightMode #extra-info-field {
+		background-color: #252525;
+		border: 1px solid grey;
+}
+
+#collapsible-text {
+		user-select: none;
+		font-size: 40%;
+		opacity: 25%;
+}
+
+/*Image Stuff*/
+
+#main-image {
+		width: 90%;
+		max-width: 500px;
+		margin: auto;
+}
+
+#main-image img {
+		margin-top: 5px;
+		object-fit: contain;
+		border-radius: 10px;
+		display: block;
+}
+
+#main-image.click-to-zoom {
+	transition: filter 0.3s, transform 0.2s;
+	transform: scale(1);
+}
+
+#main-image.click-to-zoom.zoomed {
+	transform: scale(1.6);
+}
+
+#main-image:hover {
+		filter: brightness(80%);
+}
+
+/*Create border*/
+#box-definition {
+		border: 1px solid black;
+		border-radius: 20px;
+		width: 60%;
+		//width: fit-content;
+		//max-width: 70%;
+		padding: 5px;
+		margin: auto;
+		background-color: #EDEDED;
+}
+
+.card.nightMode #box-definition {
+		border: 1px solid gray;
+		background-color: #292929;
+}
+
+/*Don't show the main screenshot on mobile (to prevent showing anime/VNs in public).
+.iphone #main-image,
+.mobile #main-image {
+    display: none;
+}
+*/
+
+/*Removes unwanted margins like under definitions*/
+ol {
+		margin: 0;
+}
+
+/*Stolen from jp-mining note*/
+
+/*
+ * --------------------
+ *  dictionary entries
+ * --------------------
+*/
+
+.dict-group__tag-list .dict-group__tag:not(:first-child)::before {
+  content: ", ";
+}
+
+.dict-group__tag-list::before {
+  content: "(";
+}
+
+.dict-group__tag-list::after {
+  content: ") ";
+}
+
+/*
+ * customization for specific dictionaries
+*/
+
+/* Makes JMDict italic */
+.glossary-text ol li[data-details="JMdict (English)"] .dict-group__tag-list {
+  font-style: italic;
+}
+
+/* removes the dictionary entry for jmdict */
+.glossary-text ol li[data-details="JMdict (English)"] .dict-group__tag-list .dict-group__tag--dict {
+  display: none;
+}
+
+

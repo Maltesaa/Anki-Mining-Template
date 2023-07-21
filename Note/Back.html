@@ -1,0 +1,65 @@
+{{FrontSide}}
+
+<hr id="answer">
+
+<!-- Box -->
+<div id="box-definition">
+
+
+    <!-- Reading and Accent -->
+    <div id="reading-field">{{Reading}}</div>
+    <div id="accent-graph">{{PitchGraph}}</div>
+
+
+    <!-- Definitions -->
+    <div id="primary-definition-field">{{PrimaryDefinition}}</div>
+
+    {{#SecondaryDefinition}}
+        <details>
+            <summary id="collapsible-text">Secondary Definition</summary>
+            <div id="secondary-definition-field">{{SecondaryDefinition}}</div>
+        </details>
+    {{/SecondaryDefinition}}
+
+    {{#ExtraDefinitions}}
+        <details>
+            <summary id="collapsible-text">Extra Definitions</summary>
+            <div id="extra-definitions-field">{{ExtraDefinitions}}</div>
+        </details>
+    {{/ExtraDefinitions}}
+
+    {{#ExtraInfo}}
+        <details>
+            <summary id="collapsible-text">Extra Info</summary>
+            <div id="extra-info-field">{{ExtraInfo}}</div>
+        </details>
+    {{/ExtraInfo}}
+
+
+    <!-- Image Zoom Script -->
+    <script>
+    	function toggleZoom(image) {
+		    image.classList.toggle("zoomed");
+	    }
+    </script>
+
+
+    <!-- Image -->
+    <div class="click-to-zoom" id="main-image" onclick="toggleZoom(this)">
+      {{Image}}
+    </div>
+
+
+    <!-- Vocab Card Specific -->
+    {{^SentenceCard}}
+    		{{^TargetedSentenceCard}}
+    			<div id="sentence-field">{{Sentence}}</div>
+    		{{/TargetedSentenceCard}}
+    {{/SentenceCard}}
+
+
+    <!-- Audio -->
+    <div id="audio-field">{{WordAudio}}{{SentenceAudio}}</div>
+
+
+</div>

@@ -1,0 +1,27 @@
+{{^SentenceCard}}
+	{{^TargetedSentenceCard}}
+		<div id="word-field">{{Word}}</div>
+	{{/TargetedSentenceCard}}
+	{{#TargetedSentenceCard}}
+		{{#SentenceBold}}
+			<div id="sentence-field">{{SentenceBold}}</div>
+		{{/SentenceBold}}
+		{{^SentenceBold}}
+			<div id="sentence-field">{{Sentence}}</div>
+		{{/SentenceBold}}
+	{{/TargetedSentenceCard}}
+{{/SentenceCard}}
+
+{{#SentenceCard}}
+	{{^TargetedSentenceCard}}
+		<div id="sentence-field">{{Sentence}}</div>
+	{{/TargetedSentenceCard}}
+	{{#TargetedSentenceCard}}
+		{{#SentenceBold}}
+			<div id="sentence-field">{{SentenceBold}}</div>
+		{{/SentenceBold}}
+		{{^SentenceBold}}
+			<div id="sentence-field">{{Sentence}}</div>
+		{{/SentenceBold}}
+	{{/TargetedSentenceCard}}
+{{/SentenceCard}}
