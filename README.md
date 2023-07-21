@@ -2,7 +2,8 @@
 I wanted clickable images and separated definitions like the [jp-mining-note](https://github.com/Aquafina-water-bottle/jp-mining-note), but the simplicity and look of the [Anime Card](https://github.com/friedrich-de/Basic-Mining-Deck) note, so I made this.
 
 ## The note
-![anki_BGynF8OufH](https://github.com/Maltesaa/Anki-Mining-Template/assets/66385422/9611a2cd-a827-4df8-a5c7-cc3f52b7c76c)
+<img src="https://user-images.githubusercontent.com/66385422/255272167-3ff7ca00-ab41-4cdd-ba2b-e424f9b49a49.gif" width="810"/>
+
 
 ## Features
 - Can be easily customized in the styling section
