@@ -23,14 +23,6 @@ b {
 	color: #fffd9e;
 }
 
-/*Wider window for portrait*/
-@media screen and (orientation: portrait) {
-    .card {
-        max-width: 100%;
-				 font-size: calc(1em + 1.5vmax);
-    }
-}
-
 /*Spacing and font size options*/
 #word-field {
     font-size: 100%;
@@ -143,6 +135,17 @@ b {
 .card.nightMode #box-definition {
 		border: 1px solid gray;
 		background-color: #292929;
+}
+
+/*Phone Options*/
+@media screen and (orientation: portrait) {
+		.card {
+				max-width: 100%;
+				font-size: calc(1em + 2vmax);
+		}
+		#box-definition {
+				width: 90%;
+		}
 }
 
 /*Don't show the main screenshot on mobile (to prevent showing anime/VNs in public).
