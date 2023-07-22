@@ -39,11 +39,14 @@ b {
 }
 
 #accent-graph {
-		font-size: 70%;
 		margin-top: -5px;
 		margin-bottom: 5px;
+		line-height: 0;
 }
 
+#accent-graph svg {
+		height: 1.2em !important;
+}
 
 /*If accent graph is list, remove list and only show first*/
 #accent-graph ol {
