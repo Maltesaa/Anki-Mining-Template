@@ -35,7 +35,16 @@ Put anything (ex. "x") in the SentenceCard or the TargetedSentenceCard fields de
 |SentenceCard||
 |TargetedSentenceCard||
 
+### Without using the jp-mining-note Yomichan template
+Same as the jp-mining-note one but change these fields.
+
+|Fields  |Value   |
+|--------|--------|
+|PrimaryDefinition|{glossary}|
+|SecondaryDefinition||
+|ExtraDefinitions||
+
 ## Todo
 - [ ] Implement frequency display
 - [ ] Fine tune styling and clean up code
-- [ ] Add Anime Cards style switchable definitions for when not using jp-mining note's Yomichan template 
+- [x] Add support for transfering from Anime Cards
