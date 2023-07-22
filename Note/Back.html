@@ -28,6 +28,14 @@
         </details>
     {{/ExtraDefinitions}}
 
+    <!-- For anime cards transfer compatibility -->
+    {{^ExtraDefinitions}}
+        <details>
+            <summary id="collapsible-text">Extra Definitions</summary>
+            <div id="extra-definitions-field">{{PrimaryDefinition}}</div>
+        </details>
+    {{/ExtraDefinitions}}
+
     {{#ExtraInfo}}
         <details>
             <summary id="collapsible-text">Extra Info</summary>
