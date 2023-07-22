@@ -14,6 +14,7 @@
 	color: white;
 }
 
+
 /*Bold colors*/
 b {
 	color: #4660f1;
@@ -22,6 +23,7 @@ b {
 .nightMode b {
 	color: #fffd9e;
 }
+
 
 /*Spacing and font size options*/
 #word-field {
@@ -42,25 +44,48 @@ b {
 		margin-bottom: 5px;
 }
 
+
+/*If accent graph is list, remove list and only show first*/
+#accent-graph ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+}
+
+#accent-graph li {
+		text-align: center;
+}
+
+#accent-graph ol li:not(:first-child) {
+  display: none; 
+}
+
 #audio-field {
 		//margin-top: -3%;
 }
 
+
 /*Definition options*/
-#primary-definition-field ol {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		margin-top: 10px;
-		margin-bottom: 10px;
-}
 
 #primary-definition-field {
 		font-size: 50%;
 }
 
+#primary-definition-field ol {
+		margin: 0;
+		padding: 0;
+}
+
 #primary-definition-field li {
 		text-align: center;
+		list-style-type: none;
+		margin-top: 10px;
+		margin-bottom: 10px;
+}
+
+/*Hide non-first list items (for anime cards transfer compatibility)*/
+#primary-definition-field ol li:not(:first-child) {
+  display: none; 
 }
 
 #secondary-definition-field ol,
@@ -92,8 +117,8 @@ b {
 		opacity: 25%;
 }
 
-/*Image Stuff*/
 
+/*Image Stuff*/
 #main-image {
 		width: 90%;
 		max-width: 500px;
@@ -120,6 +145,7 @@ b {
 		filter: brightness(80%);
 }
 
+
 /*Create border*/
 #box-definition {
 		border: 1px solid black;
@@ -136,6 +162,7 @@ b {
 		border: 1px solid gray;
 		background-color: #292929;
 }
+
 
 /*Phone Options*/
 @media screen and (orientation: portrait) {
@@ -155,13 +182,14 @@ b {
 }
 */
 
+
 /*Removes unwanted margins like under definitions*/
 ol {
 		margin: 0;
 }
 
-/*Stolen from jp-mining note*/
 
+/*Stolen from jp-mining note*/
 /*
  * --------------------
  *  dictionary entries
