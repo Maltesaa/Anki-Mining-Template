@@ -10,6 +10,13 @@
     <div id="reading-field">{{Reading}}</div>
     <div id="accent-graph">{{PitchGraph}}</div>
 
+		<script>
+				// Remove 'No pitch accent data' text
+				if (document.getElementById('accent-graph').innerHTML === "No pitch accent data") {
+    				document.getElementById('accent-graph').style.visibility = "hidden"
+				}
+		</script>
+
 
     <!-- Definitions -->
     <div id="primary-definition-field">{{PrimaryDefinition}}</div>
@@ -44,15 +51,13 @@
     {{/ExtraInfo}}
 
 
-    <!-- Image Zoom Script -->
+    <!-- Image -->
     <script>
     	function toggleZoom(image) {
 		    image.classList.toggle("zoomed");
 	    }
     </script>
 
-
-    <!-- Image -->
     <div class="click-to-zoom" id="main-image" onclick="toggleZoom(this)">
       {{Image}}
     </div>
