@@ -38,6 +38,8 @@ b {
     font-size: 100%;
 }
 
+
+/*Pitch accent graph*/
 #accent-graph {
 		margin-top: -5px;
 		margin-bottom: 5px;
@@ -48,7 +50,10 @@ b {
 		height: 1.2em !important;
 }
 
-/*If accent graph is list, remove list and only show first*/
+#accent-graph svg:not(:first-child) {
+		display: none !important;
+}
+
 #accent-graph ol {
 		list-style-type: none;
 		margin: 0;
@@ -63,15 +68,16 @@ b {
   display: none; 
 }
 
+
+/*Audio*/
 #audio-field {
-		//margin-top: -3%;
+		line-height: 0;
 }
 
 
 /*Definition options*/
-
 #primary-definition-field {
-		font-size: 50%;
+		font-size: 55%;
 }
 
 #primary-definition-field ol {
@@ -82,8 +88,6 @@ b {
 #primary-definition-field li {
 		text-align: center;
 		list-style-type: none;
-		margin-top: 10px;
-		margin-bottom: 10px;
 }
 
 /*Hide non-first list items (for anime cards transfer compatibility)*/
@@ -120,42 +124,48 @@ b {
 		opacity: 25%;
 }
 
+ol {
+		margin: 0;
+}
 
 /*Image Stuff*/
 #main-image {
-		width: 90%;
-		max-width: 500px;
-		margin: auto;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		/*Width of the image relative to the box*/
+		width: 70%;
 }
 
 #main-image img {
-		margin-top: 5px;
-		object-fit: contain;
+		width: 100%;
+		/*Curved edges*/
 		border-radius: 10px;
 		display: block;
 }
 
 #main-image.click-to-zoom {
-	transition: filter 0.3s, transform 0.2s;
-	transform: scale(1);
+		transition: filter 0.3s, transform 0.2s;
+		transform: scale(1);
 }
 
 #main-image.click-to-zoom.zoomed {
-	transform: scale(1.6);
+		transform: scale(1.6);
 }
 
 #main-image:hover {
 		filter: brightness(80%);
 }
 
-
 /*Create border*/
 #box-definition {
 		border: 1px solid black;
+		/*Curved edges*/
 		border-radius: 20px;
+		/*Width of box relative of window size*/
 		width: 60%;
-		//width: fit-content;
-		//max-width: 70%;
+		/*Inner padding so elements arent right against the edge*/
 		padding: 5px;
 		margin: auto;
 		background-color: #EDEDED;
@@ -178,27 +188,8 @@ b {
 		}
 }
 
-/*Don't show the main screenshot on mobile (to prevent showing anime/VNs in public).
-.iphone #main-image,
-.mobile #main-image {
-    display: none;
-}
-*/
 
-
-/*Removes unwanted margins like under definitions*/
-ol {
-		margin: 0;
-}
-
-
-/*Stolen from jp-mining note*/
-/*
- * --------------------
- *  dictionary entries
- * --------------------
-*/
-
+/*Making dictionary entries look nicer (Stolen from jp-mining-note)*/
 .dict-group__tag-list .dict-group__tag:not(:first-child)::before {
   content: ", ";
 }
@@ -211,10 +202,6 @@ ol {
   content: ") ";
 }
 
-/*
- * customization for specific dictionaries
-*/
-
 /* Makes JMDict italic */
 .glossary-text ol li[data-details="JMdict (English)"] .dict-group__tag-list {
   font-style: italic;
@@ -224,5 +211,3 @@ ol {
 .glossary-text ol li[data-details="JMdict (English)"] .dict-group__tag-list .dict-group__tag--dict {
   display: none;
 }
-
-
