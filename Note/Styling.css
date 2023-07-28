@@ -1,27 +1,28 @@
 .card {
-	font-family: "Yu Mincho";
-	font-size: 45px;
-	text-align: center;
-	color: black;
-	background-color:#EFEFEF;
-	margin-left:  auto;
-	margin-right:  auto;
-	max-width: 80%;
-	overflow-y: scroll;
+		font-family: "Yu Mincho";
+		font-size: 45px;
+		text-align: center;
+		color: black;
+		background-color:#EFEFEF;
+		margin-left:  auto;
+		margin-right:  auto;
+		max-width: 80%;
+		overflow-y: scroll;
 }
 
 .card.nightMode {
-	color: white;
+		color: white;
+		background-color:#303032;
 }
 
 
 /*Bold colors*/
 b {
-	color: #4660f1;
+		color: #4660f1;
 }
 
 .nightMode b {
-	color: #fffd9e;
+		color: #fffd9e;
 }
 
 
@@ -78,6 +79,9 @@ b {
 /*Definition options*/
 #primary-definition-field {
 		font-size: 55%;
+		//display: flex;
+		justify-content: center;
+		
 }
 
 #primary-definition-field ol {
@@ -95,26 +99,28 @@ b {
   display: none; 
 }
 
-#secondary-definition-field ol,
-#extra-definitions-field ol,
+#secondary-definition-field,
+#extra-definitions-field,
 #extra-info-field {
 		font-size: 40%;
-		background-color: #E3E3E3;
+		background-color: #DFDFE1;
 		border: 1px solid black;
 		border-radius: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 }
 
 #extra-info-field {
 		margin: auto;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
 		width: fit-content;
 }
 
-.card.nightMode #secondary-definition-field ol,
-.card.nightMode #extra-definitions-field ol,
+.card.nightMode #secondary-definition-field,
+.card.nightMode #extra-definitions-field,
 .card.nightMode #extra-info-field {
-		background-color: #252525;
+		background-color: #252527;
 		border: 1px solid grey;
 }
 
@@ -135,14 +141,17 @@ ol {
 		margin-left: auto;
 		margin-right: auto;
 		/*Width of the image relative to the box*/
-		width: 70%;
+		max-width: 70%;
 }
 
 #main-image img {
 		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: contain;
+		background-color: black;
+		display: block;
 		/*Curved edges*/
 		border-radius: 10px;
-		display: block;
 }
 
 #main-image.click-to-zoom {
@@ -168,12 +177,12 @@ ol {
 		/*Inner padding so elements arent right against the edge*/
 		padding: 5px;
 		margin: auto;
-		background-color: #EDEDED;
+		background-color: #e3e3e3;
 }
 
 .card.nightMode #box-definition {
 		border: 1px solid gray;
-		background-color: #292929;
+		background-color: #29292b;
 }
 
 
