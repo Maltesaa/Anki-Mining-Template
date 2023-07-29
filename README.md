@@ -30,7 +30,6 @@ Put anything (ex. "x") in the SentenceCard or the TargetedSentenceCard fields de
 |ExtraDefinitions|{jpmn-extra-definitions}|
 |ExtraInfo||
 |Frequency|{jpmn-frequency-sort}|
-|Blur||
 |SentenceCard||
 |TargetedSentenceCard||
 
