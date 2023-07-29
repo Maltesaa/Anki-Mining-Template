@@ -39,9 +39,12 @@ Same as jp-mining-note except for these fields:
 
 |Fields  |Value   |
 |--------|--------|
-|PrimaryDefinition|{glossary}|
+|PrimaryDefinition|{selection-text}|
 |SecondaryDefinition||
-|ExtraDefinitions||
+|ExtraDefinitions|{glossary}|
 
 ## Transfering from Anime Cards
 Pair the glossary field to PrimaryDefinitions. This will show the first definition in the list as the primary definition and the rest will be shown under extra definitions.
+
+## Todo
+- [ ] Make secondary definitions work without a custom handlebar
